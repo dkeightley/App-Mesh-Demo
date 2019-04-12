@@ -9,7 +9,9 @@ This repo includes Kubernetes manifests and App Mesh configuration to launch two
 - **backend**: A Python web application which serves random cat, or dog GIFs. These are abstracted as two separate Kubernetes ClusterIP Services, requests can be weighted between these as targets in the App Mesh rules.
 
 ### You'll need:
-- Access to a Kubernetes cluster running in AWS via kubectl
+- Access to a Kubernetes cluster running in AWS, if you haven't got one check out [eksctl](https://eksctl.io/)
+- kubectl configured for this cluster on your laptop/workstation
+- AWS CLI (v1.16.133 or newer) installed with credentials configured
 - Permissions to create and manage App Mesh resources
 
 # Lets begin!
