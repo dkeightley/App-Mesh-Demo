@@ -1,0 +1,11 @@
+{
+    "meshName": "catdog-eks", 
+    "spec": {
+        "provider": {
+            "virtualRouter": {
+                "virtualRouterName": "catdog-backend"
+            }
+        }
+    }, 
+    "virtualServiceName": "catdog-backend.default.svc.cluster.local"
+}

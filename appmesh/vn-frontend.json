@@ -1,0 +1,26 @@
+{
+    "meshName": "catdog-eks", 
+    "spec": {
+        "backends": [
+            {
+                "virtualService": {
+                    "virtualServiceName": "catdog-backend.default.svc.cluster.local"
+                }
+            }
+        ], 
+        "listeners": [
+            {
+                "portMapping": {
+                    "port": 80, 
+                    "protocol": "http"
+                }
+            }
+        ],
+        "serviceDiscovery": {
+            "dns": {
+                "hostname": "catdog-frontend.default.svc.cluster.local"
+            }
+        }
+    }, 
+    "virtualNodeName": "catdog-frontend"
+}

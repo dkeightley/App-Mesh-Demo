@@ -1,0 +1,24 @@
+{
+    "meshName": "catdog-eks",
+    "routeName": "catdog-backend",
+    "spec": {
+      "httpRoute": {
+        "action": {
+          "weightedTargets": [
+            {
+              "virtualNode": "catdog-cat",
+              "weight": 0
+            },
+            {
+              "virtualNode": "catdog-dog",
+              "weight": 1
+            }
+          ]
+        },
+        "match": {
+          "prefix": "/"
+        }
+      }
+    },
+    "virtualRouterName": "catdog-backend"
+}
