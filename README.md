@@ -23,7 +23,7 @@ Each Service contains Pods configured with the Envoy proxy alongside the applica
 ### Clone this repo
 
 ```bash
-git clone https://github.com/dkeightley/App-Mesh-Demo.git`
+git clone https://github.com/dkeightley/App-Mesh-Demo.git
 cd App-Mesh-Demo
 ```
 
