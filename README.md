@@ -6,7 +6,7 @@ This repo includes Kubernetes manifests and App Mesh configuration to launch two
 
 - **frontend**: An nginx web server that passes connections to the backend service. This is configured as a `type: LoadBalancer` Kubernetes Service, a Classic Load Balancer (CLB) will be created for ingress requests.
 
-- **backend**: A Python web application which serves random cat, or dog GIFs. These are abstracted as two separate Kubernetes ClusterIP Services, requests can be weighted between these as targets in the App Mesh rules.
+- **backend**: A Python web application which serves random cat, or dog GIFs. These are abstracted as two separate Kubernetes `ClusterIP` Services, requests can be weighted between these as targets in the App Mesh `catdog-backend` route.
 
 Each Service contains Pods configured with the Envoy proxy alongside the application container.
 
@@ -29,7 +29,7 @@ cd App-Mesh-Demo
 
 ### Configuration changes
 
-The demo should work as it is, however if you want to, at this point you can alter any configuration like frontend the 'type: LoadBalancer' Service can be changed to avoid creating a CLB.
+The demo should work as it is, however if you want to, at this point you can alter any configuration like frontend the `type: LoadBalancer` Service can be changed to avoid creating a CLB.
 
 ### Deploy the components
 
@@ -47,7 +47,7 @@ kubectl get svc catdog-frontend -o wide
 
 You should see the `EXTERNAL-IP` column containing a DNS name for the CLB. Once it has had time to provision you can load this in a browser.
 
-The route is currently configured with a 100% weight to the 'catdog-dog' Service, this serves dog GIFs.
+The route is currently configured with a 100% weight to the 'catdog-dog' Service, this serves random dog GIFs.
 
 ### Update the route
 
