@@ -57,6 +57,8 @@ Edit the route-backend.json file, adjust the weight for the targets to your choo
 ./deploy update-routes
 ```
 
+Note: this change to the route can also be made in the App Mesh Console
+
 Within a short period of time, further loads of the website will load according to the weight configured.
 
 You can also watch this by grepping for 'response' in the website content, for example:
